@@ -1,0 +1,7 @@
+[V, F, P] = openOFF('../../ex3/model.off', 'newplot');
+
+%% using homogeneous projection matrix
+figure
+
+projectedVerts = pinholeProject([0, 0, -1], 1, V);
+patch(projectedVerts(:, 1), projectedVerts(:, 2), 'green');
